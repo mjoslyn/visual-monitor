@@ -50,7 +50,7 @@ export default function App() {
     );
   }
 
-  const sites = Object.values(state.sites);
+  const sites = Object.values(state.sites).sort((a, b) => a.name.localeCompare(b.name));
   const filteredSites = sites.filter((s) => {
     if (filter === 'changed' && s.status !== 'changed') return false;
     if (filter === 'ok' && s.status !== 'ok') return false;

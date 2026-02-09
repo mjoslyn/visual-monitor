@@ -145,7 +145,8 @@ async function run() {
 
           // Step 3: Notify
           console.log(`[monitor]   Threshold exceeded — sending notifications...`);
-          await notify(site, changePercent);
+          const baselinePath = join(PATHS.baselines, `${site.id}.png`);
+          await notify(site, changePercent, '', { before: baselinePath, after: screenshotPath });
         } else {
           siteState.status = 'ok';
 

@@ -12,8 +12,7 @@
     "auth": null,
     "tags": [],
     "notifications": {
-      "discord": true,
-      "slack": false
+      "mailgun": true
     }
   },
   {
@@ -29,8 +28,7 @@
     "auth": null,
     "tags": [],
     "notifications": {
-      "discord": true,
-      "slack": false
+      "mailgun": true
     }
   },
   {
@@ -46,8 +44,7 @@
     "auth": null,
     "tags": [],
     "notifications": {
-      "discord": true,
-      "slack": false
+      "mailgun": true
     }
   },
   {
@@ -63,8 +60,7 @@
     "auth": null,
     "tags": [],
     "notifications": {
-      "discord": true,
-      "slack": false
+      "mailgun": true
     }
   },
   {
@@ -80,8 +76,7 @@
     "auth": null,
     "tags": [],
     "notifications": {
-      "discord": true,
-      "slack": false
+      "mailgun": true
     }
   },
   {
@@ -97,8 +92,7 @@
     "auth": null,
     "tags": [],
     "notifications": {
-      "discord": true,
-      "slack": false
+      "mailgun": true
     }
   },
   {
@@ -114,8 +108,7 @@
     "auth": null,
     "tags": [],
     "notifications": {
-      "discord": true,
-      "slack": false
+      "mailgun": true
     }
   },
   {
@@ -131,8 +124,7 @@
     "auth": null,
     "tags": [],
     "notifications": {
-      "discord": true,
-      "slack": false
+      "mailgun": true
     }
   }
 ]

@@ -2,9 +2,8 @@
  * Send notifications when a site change exceeds its threshold.
  */
 
-const DISCORD_WEBHOOK = process.env.DISCORD_WEBHOOK;
-const SLACK_WEBHOOK = process.env.SLACK_WEBHOOK;
-const NTFY_TOPIC = process.env.NTFY_TOPIC;
+import { readFileSync } from 'fs';
+
 const MAILGUN_API_KEY = process.env.MAILGUN_API_KEY;
 const MAILGUN_DOMAIN = process.env.MAILGUN_DOMAIN;
 const MAILGUN_TO = process.env.MAILGUN_TO;
@@ -15,24 +14,13 @@ const MAILGUN_FROM = process.env.MAILGUN_FROM || `Visual Monitor <noreply@${MAIL
  * @param {object} site - Site config from sites.json
  * @param {number} changePercent - Percentage of pixels changed
  * @param {string} dashboardUrl - URL to the dashboard (optional)
+ * @param {object} screenshots - { before: path, after: path } (optional)
  */
-export async function notify(site, changePercent, dashboardUrl = '') {
+export async function notify(site, changePercent, dashboardUrl = '', screenshots = null) {
   const promises = [];
 
-  if (site.notifications?.discord !== false && DISCORD_WEBHOOK) {
-    promises.push(sendDiscord(site, changePercent, dashboardUrl));
-  }
-
-  if (site.notifications?.slack && SLACK_WEBHOOK) {
-    promises.push(sendSlack(site, changePercent, dashboardUrl));
-  }
-
-  if (NTFY_TOPIC) {
-    promises.push(sendNtfy(site, changePercent, dashboardUrl));
-  }
-
   if (site.notifications?.mailgun !== false && MAILGUN_API_KEY && MAILGUN_DOMAIN && MAILGUN_TO) {
-    promises.push(sendMailgun(site, changePercent, dashboardUrl));
+    promises.push(sendMailgun(site, changePercent, dashboardUrl, screenshots));
   }
 
   const results = await Promise.allSettled(promises);
@@ -43,120 +31,38 @@ export async function notify(site, changePercent, dashboardUrl = '') {
   }
 }
 
-async function sendDiscord(site, changePercent, dashboardUrl) {
-  const color = changePercent > 20 ? 0xff4444 : changePercent > 5 ? 0xffaa00 : 0x00ccff;
-
-  const payload = {
-    embeds: [
-      {
-        title: `🔍 Change Detected: ${site.name}`,
-        description: `**${changePercent}%** visual difference detected on [${site.url}](${site.url})`,
-        color,
-        fields: [
-          { name: 'Site ID', value: site.id, inline: true },
-          { name: 'Threshold', value: `${site.threshold}%`, inline: true },
-          { name: 'Change', value: `${changePercent}%`, inline: true },
-        ],
-        footer: { text: 'Visual Change Monitor' },
-        timestamp: new Date().toISOString(),
-      },
-    ],
-  };
-
-  if (dashboardUrl) {
-    payload.embeds[0].url = dashboardUrl;
-  }
-
-  const res = await fetch(DISCORD_WEBHOOK, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
-  });
-
-  if (!res.ok) {
-    throw new Error(`Discord webhook failed: ${res.status} ${res.statusText}`);
-  }
-
-  console.log(`[notify] Discord notification sent for ${site.id}`);
-}
-
-async function sendSlack(site, changePercent, dashboardUrl) {
-  const emoji = changePercent > 20 ? '🔴' : changePercent > 5 ? '🟡' : '🔵';
-
-  const payload = {
-    blocks: [
-      {
-        type: 'header',
-        text: { type: 'plain_text', text: `${emoji} Visual Change: ${site.name}` },
-      },
-      {
-        type: 'section',
-        fields: [
-          { type: 'mrkdwn', text: `*URL:*\n<${site.url}>` },
-          { type: 'mrkdwn', text: `*Change:*\n${changePercent}%` },
-          { type: 'mrkdwn', text: `*Threshold:*\n${site.threshold}%` },
-          { type: 'mrkdwn', text: `*Site ID:*\n${site.id}` },
-        ],
-      },
-    ],
-  };
-
-  if (dashboardUrl) {
-    payload.blocks.push({
-      type: 'actions',
-      elements: [
-        {
-          type: 'button',
-          text: { type: 'plain_text', text: 'View Dashboard' },
-          url: dashboardUrl,
-        },
-      ],
-    });
-  }
-
-  const res = await fetch(SLACK_WEBHOOK, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
-  });
-
-  if (!res.ok) {
-    throw new Error(`Slack webhook failed: ${res.status} ${res.statusText}`);
-  }
-
-  console.log(`[notify] Slack notification sent for ${site.id}`);
-}
-
-async function sendNtfy(site, changePercent, dashboardUrl) {
-  const url = `https://ntfy.sh/${NTFY_TOPIC}`;
-
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: {
-      Title: `Visual Change: ${site.name} (${changePercent}%)`,
-      Priority: changePercent > 20 ? 'high' : 'default',
-      Tags: 'mag,warning',
-      ...(dashboardUrl ? { Click: dashboardUrl } : {}),
-    },
-    body: `${changePercent}% visual diff detected on ${site.url}. Threshold: ${site.threshold}%`,
-  });
-
-  if (!res.ok) {
-    throw new Error(`ntfy.sh failed: ${res.status} ${res.statusText}`);
-  }
-
-  console.log(`[notify] ntfy.sh notification sent for ${site.id}`);
-}
-
-async function sendMailgun(site, changePercent, dashboardUrl) {
+async function sendMailgun(site, changePercent, dashboardUrl, screenshots) {
   const url = `https://api.mailgun.net/v3/${MAILGUN_DOMAIN}/messages`;
   const severity = changePercent > 20 ? 'HIGH' : changePercent > 5 ? 'MEDIUM' : 'LOW';
 
-  const body = new URLSearchParams({
-    from: MAILGUN_FROM,
-    to: MAILGUN_TO,
-    subject: `[${severity}] Visual Change: ${site.name} (${changePercent}%)`,
-    text: [
+  const form = new FormData();
+  form.append('from', MAILGUN_FROM);
+  form.append('to', MAILGUN_TO);
+  form.append('subject', `[${severity}] Visual Change: ${site.name} (${changePercent}%)`);
+
+  if (screenshots?.before && screenshots?.after) {
+    const html = [
+      `<h2>${changePercent}% visual difference detected</h2>`,
+      `<p><strong>Site:</strong> ${site.name}<br>`,
+      `<strong>URL:</strong> <a href="${site.url}">${site.url}</a><br>`,
+      `<strong>Threshold:</strong> ${site.threshold}%<br>`,
+      `<strong>Change:</strong> ${changePercent}%</p>`,
+      dashboardUrl ? `<p><a href="${dashboardUrl}">View Dashboard</a></p>` : '',
+      `<h3>Before</h3>`,
+      `<img src="cid:before.png" style="max-width:100%;border:1px solid #ccc;" />`,
+      `<h3>After</h3>`,
+      `<img src="cid:after.png" style="max-width:100%;border:1px solid #ccc;" />`,
+    ].join('\n');
+
+    form.append('html', html);
+
+    const beforeBuf = readFileSync(screenshots.before);
+    const afterBuf = readFileSync(screenshots.after);
+
+    form.append('inline', new Blob([beforeBuf], { type: 'image/png' }), 'before.png');
+    form.append('inline', new Blob([afterBuf], { type: 'image/png' }), 'after.png');
+  } else {
+    form.append('text', [
       `${changePercent}% visual difference detected.`,
       '',
       `Site: ${site.name}`,
@@ -164,15 +70,15 @@ async function sendMailgun(site, changePercent, dashboardUrl) {
       `Threshold: ${site.threshold}%`,
       `Change: ${changePercent}%`,
       ...(dashboardUrl ? ['', `Dashboard: ${dashboardUrl}`] : []),
-    ].join('\n'),
-  });
+    ].join('\n'));
+  }
 
   const res = await fetch(url, {
     method: 'POST',
     headers: {
       Authorization: `Basic ${btoa(`api:${MAILGUN_API_KEY}`)}`,
     },
-    body,
+    body: form,
   });
 
   if (!res.ok) {
