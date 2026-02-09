@@ -1,0 +1,328 @@
+{
+  "lastRun": "2026-02-09T01:10:38.447Z",
+  "sites": {
+    "hacker-news": {
+      "id": "hacker-news",
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com",
+      "status": "error",
+      "lastChecked": "2026-02-09T01:10:38.447Z",
+      "lastChanged": "2026-02-08T12:00:00Z",
+      "changePercent": 14.2,
+      "history": [
+        {
+          "timestamp": "2026-02-06T00:00:00Z",
+          "changePercent": 8.1
+        },
+        {
+          "timestamp": "2026-02-06T06:00:00Z",
+          "changePercent": 12.3
+        },
+        {
+          "timestamp": "2026-02-06T12:00:00Z",
+          "changePercent": 5.7
+        },
+        {
+          "timestamp": "2026-02-06T18:00:00Z",
+          "changePercent": 9.4
+        },
+        {
+          "timestamp": "2026-02-07T00:00:00Z",
+          "changePercent": 3.2
+        },
+        {
+          "timestamp": "2026-02-07T06:00:00Z",
+          "changePercent": 15.8
+        },
+        {
+          "timestamp": "2026-02-07T12:00:00Z",
+          "changePercent": 7.6
+        },
+        {
+          "timestamp": "2026-02-07T18:00:00Z",
+          "changePercent": 11.1
+        },
+        {
+          "timestamp": "2026-02-08T00:00:00Z",
+          "changePercent": 4.5
+        },
+        {
+          "timestamp": "2026-02-08T06:00:00Z",
+          "changePercent": 6.8
+        },
+        {
+          "timestamp": "2026-02-08T12:00:00Z",
+          "changePercent": 14.2
+        }
+      ],
+      "totalChanges": 42,
+      "checksToday": 0,
+      "tags": [
+        "news",
+        "tech"
+      ],
+      "error": "browserType.launch: Executable doesn't exist at /Users/michaeljoslyn/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    "example-stable": {
+      "id": "example-stable",
+      "name": "Example.com (Stable)",
+      "url": "https://example.com",
+      "status": "error",
+      "lastChecked": "2026-02-09T01:10:38.447Z",
+      "lastChanged": "2026-01-15T06:00:00Z",
+      "changePercent": 0,
+      "history": [
+        {
+          "timestamp": "2026-02-06T00:00:00Z",
+          "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-06T06:00:00Z",
+          "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-06T12:00:00Z",
+          "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-06T18:00:00Z",
+          "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-07T00:00:00Z",
+          "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-07T06:00:00Z",
+          "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-07T12:00:00Z",
+          "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-07T18:00:00Z",
+          "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-08T00:00:00Z",
+          "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-08T06:00:00Z",
+          "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-08T12:00:00Z",
+          "changePercent": 0
+        }
+      ],
+      "totalChanges": 1,
+      "checksToday": 0,
+      "tags": [
+        "test",
+        "stable"
+      ],
+      "error": "browserType.launch: Executable doesn't exist at /Users/michaeljoslyn/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    "github-trending": {
+      "id": "github-trending",
+      "name": "GitHub Trending",
+      "url": "https://github.com/trending",
+      "status": "error",
+      "lastChecked": "2026-02-09T01:10:38.447Z",
+      "lastChanged": "2026-02-08T06:00:00Z",
+      "changePercent": 8.7,
+      "history": [
+        {
+          "timestamp": "2026-02-06T00:00:00Z",
+          "changePercent": 2.1
+        },
+        {
+          "timestamp": "2026-02-06T06:00:00Z",
+          "changePercent": 5.4
+        },
+        {
+          "timestamp": "2026-02-06T12:00:00Z",
+          "changePercent": 3.8
+        },
+        {
+          "timestamp": "2026-02-06T18:00:00Z",
+          "changePercent": 7.2
+        },
+        {
+          "timestamp": "2026-02-07T00:00:00Z",
+          "changePercent": 1.5
+        },
+        {
+          "timestamp": "2026-02-07T06:00:00Z",
+          "changePercent": 4.9
+        },
+        {
+          "timestamp": "2026-02-07T12:00:00Z",
+          "changePercent": 6.3
+        },
+        {
+          "timestamp": "2026-02-07T18:00:00Z",
+          "changePercent": 2.8
+        },
+        {
+          "timestamp": "2026-02-08T00:00:00Z",
+          "changePercent": 0.4
+        },
+        {
+          "timestamp": "2026-02-08T06:00:00Z",
+          "changePercent": 9.1
+        },
+        {
+          "timestamp": "2026-02-08T12:00:00Z",
+          "changePercent": 8.7
+        }
+      ],
+      "totalChanges": 28,
+      "checksToday": 0,
+      "tags": [
+        "dev",
+        "trending"
+      ],
+      "error": "browserType.launch: Executable doesn't exist at /Users/michaeljoslyn/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    "fenton-mobility": {
+      "id": "fenton-mobility",
+      "name": "Fenton Mobility",
+      "url": "https://www.fentonmobility.com",
+      "status": "error",
+      "lastChecked": "2026-02-09T01:10:38.447Z",
+      "lastChanged": null,
+      "changePercent": 0,
+      "history": [],
+      "totalChanges": 0,
+      "checksToday": 0,
+      "tags": [
+        "client"
+      ],
+      "error": "browserType.launch: Executable doesn't exist at /Users/michaeljoslyn/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    "fenton-mobility-shop": {
+      "id": "fenton-mobility-shop",
+      "name": "Fenton Mobility Shop",
+      "url": "https://www.fentonmobility.com/shop/",
+      "status": "error",
+      "lastChecked": "2026-02-09T01:10:38.447Z",
+      "lastChanged": null,
+      "changePercent": 0,
+      "history": [],
+      "totalChanges": 0,
+      "checksToday": 0,
+      "tags": [
+        "client",
+        "shop"
+      ],
+      "error": "browserType.launch: Executable doesn't exist at /Users/michaeljoslyn/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    }
+  },
+  "activityLog": [
+    {
+      "timestamp": "2026-02-09T01:10:38.447Z",
+      "siteId": "fenton-mobility-shop",
+      "type": "error",
+      "detail": "browserType.launch: Executable doesn't exist at /Users/michaeljoslyn/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    {
+      "timestamp": "2026-02-09T01:10:38.447Z",
+      "siteId": "fenton-mobility",
+      "type": "error",
+      "detail": "browserType.launch: Executable doesn't exist at /Users/michaeljoslyn/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    {
+      "timestamp": "2026-02-09T01:10:38.447Z",
+      "siteId": "github-trending",
+      "type": "error",
+      "detail": "browserType.launch: Executable doesn't exist at /Users/michaeljoslyn/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    {
+      "timestamp": "2026-02-09T01:10:38.447Z",
+      "siteId": "example-stable",
+      "type": "error",
+      "detail": "browserType.launch: Executable doesn't exist at /Users/michaeljoslyn/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    {
+      "timestamp": "2026-02-09T01:10:38.447Z",
+      "siteId": "hacker-news",
+      "type": "error",
+      "detail": "browserType.launch: Executable doesn't exist at /Users/michaeljoslyn/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    {
+      "timestamp": "2026-02-08T12:00:00Z",
+      "siteId": "hacker-news",
+      "type": "change",
+      "detail": "14.2% visual diff detected"
+    },
+    {
+      "timestamp": "2026-02-08T12:00:00Z",
+      "siteId": "example-stable",
+      "type": "check",
+      "detail": "0% change (below 1% threshold)"
+    },
+    {
+      "timestamp": "2026-02-08T12:00:00Z",
+      "siteId": "github-trending",
+      "type": "change",
+      "detail": "8.7% visual diff detected"
+    },
+    {
+      "timestamp": "2026-02-08T06:00:00Z",
+      "siteId": "hacker-news",
+      "type": "check",
+      "detail": "6.8% change (above 5% threshold)"
+    },
+    {
+      "timestamp": "2026-02-08T06:00:00Z",
+      "siteId": "github-trending",
+      "type": "change",
+      "detail": "9.1% visual diff detected"
+    },
+    {
+      "timestamp": "2026-02-08T06:00:00Z",
+      "siteId": "example-stable",
+      "type": "check",
+      "detail": "0% change (below 1% threshold)"
+    },
+    {
+      "timestamp": "2026-02-08T00:00:00Z",
+      "siteId": "hacker-news",
+      "type": "check",
+      "detail": "4.5% change (below 5% threshold)"
+    },
+    {
+      "timestamp": "2026-02-08T00:00:00Z",
+      "siteId": "github-trending",
+      "type": "check",
+      "detail": "0.4% change (below 3% threshold)"
+    },
+    {
+      "timestamp": "2026-02-07T18:00:00Z",
+      "siteId": "hacker-news",
+      "type": "change",
+      "detail": "11.1% visual diff detected"
+    },
+    {
+      "timestamp": "2026-02-07T18:00:00Z",
+      "siteId": "github-trending",
+      "type": "check",
+      "detail": "2.8% change (below 3% threshold)"
+    },
+    {
+      "timestamp": "2026-02-07T12:00:00Z",
+      "siteId": "hacker-news",
+      "type": "change",
+      "detail": "7.6% visual diff detected"
+    },
+    {
+      "timestamp": "2026-02-07T12:00:00Z",
+      "siteId": "github-trending",
+      "type": "change",
+      "detail": "6.3% visual diff detected"
+    }
+  ]
+}

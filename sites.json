@@ -1,0 +1,87 @@
+[
+  {
+    "id": "hacker-news",
+    "name": "Hacker News",
+    "url": "https://news.ycombinator.com",
+    "schedule": "*/6 * * *",
+    "threshold": 5.0,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": false,
+    "waitFor": "networkidle",
+    "hideSelectors": [],
+    "auth": null,
+    "tags": ["news", "tech"],
+    "notifications": {
+      "discord": true,
+      "slack": false
+    }
+  },
+  {
+    "id": "example-stable",
+    "name": "Example.com (Stable)",
+    "url": "https://example.com",
+    "schedule": "*/6 * * *",
+    "threshold": 1.0,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": false,
+    "waitFor": "networkidle",
+    "hideSelectors": [],
+    "auth": null,
+    "tags": ["test", "stable"],
+    "notifications": {
+      "discord": true,
+      "slack": false
+    }
+  },
+  {
+    "id": "github-trending",
+    "name": "GitHub Trending",
+    "url": "https://github.com/trending",
+    "schedule": "*/6 * * *",
+    "threshold": 3.0,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": true,
+    "waitFor": "networkidle",
+    "hideSelectors": [".js-notice", "[data-hovercard-type]"],
+    "auth": null,
+    "tags": ["dev", "trending"],
+    "notifications": {
+      "discord": true,
+      "slack": true
+    }
+  },
+  {
+    "id": "fenton-mobility",
+    "name": "Fenton Mobility",
+    "url": "https://www.fentonmobility.com",
+    "schedule": "*/6 * * *",
+    "threshold": 3.0,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": false,
+    "waitFor": "networkidle",
+    "hideSelectors": [],
+    "auth": null,
+    "tags": ["client"],
+    "notifications": {
+      "discord": true,
+      "slack": false
+    }
+  },
+  {
+    "id": "fenton-mobility-shop",
+    "name": "Fenton Mobility Shop",
+    "url": "https://www.fentonmobility.com/shop/",
+    "schedule": "*/6 * * *",
+    "threshold": 3.0,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": false,
+    "waitFor": "networkidle",
+    "hideSelectors": [],
+    "auth": null,
+    "tags": ["client", "shop"],
+    "notifications": {
+      "discord": true,
+      "slack": false
+    }
+  }
+]
