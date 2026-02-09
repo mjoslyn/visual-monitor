@@ -1,22 +1,26 @@
 {
-  "lastRun": "2026-02-09T01:39:56.137Z",
+  "lastRun": "2026-02-09T01:45:31.744Z",
   "sites": {
     "fenton-mobility": {
       "id": "fenton-mobility",
       "name": "Fenton Mobility",
       "url": "https://www.fentonmobility.com",
       "status": "ok",
-      "lastChecked": "2026-02-09T01:39:56.137Z",
+      "lastChecked": "2026-02-09T01:45:31.744Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
         {
           "timestamp": "2026-02-09T01:39:56.137Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-09T01:45:31.744Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 0,
-      "checksToday": 1,
+      "checksToday": 2,
       "tags": [
         "client"
       ],
@@ -27,17 +31,21 @@
       "name": "Fenton Mobility Shop",
       "url": "https://www.fentonmobility.com/shop/",
       "status": "ok",
-      "lastChecked": "2026-02-09T01:39:56.137Z",
+      "lastChecked": "2026-02-09T01:45:31.744Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
         {
           "timestamp": "2026-02-09T01:39:56.137Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-09T01:45:31.744Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 0,
-      "checksToday": 1,
+      "checksToday": 2,
       "tags": [
         "client",
         "shop"
@@ -49,17 +57,21 @@
       "name": "Allegany Mountain Resort",
       "url": "https://alleganymountainresort.com/",
       "status": "ok",
-      "lastChecked": "2026-02-09T01:39:56.137Z",
+      "lastChecked": "2026-02-09T01:45:31.744Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
         {
           "timestamp": "2026-02-09T01:39:56.137Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-09T01:45:31.744Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 0,
-      "checksToday": 1,
+      "checksToday": 2,
       "tags": [
         "client"
       ],
@@ -70,17 +82,21 @@
       "name": "Allegany Claim Your Pass",
       "url": "https://alleganymountainresort.com/claim-your-pass/",
       "status": "ok",
-      "lastChecked": "2026-02-09T01:39:56.137Z",
+      "lastChecked": "2026-02-09T01:45:31.744Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
         {
           "timestamp": "2026-02-09T01:39:56.137Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-09T01:45:31.744Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 0,
-      "checksToday": 1,
+      "checksToday": 2,
       "tags": [
         "client"
       ],
@@ -91,17 +107,21 @@
       "name": "Allegany RV Drawing Entry",
       "url": "https://alleganymountainresort.com/entry-for-drawing-7-days-rv-lakefront-campsite/",
       "status": "ok",
-      "lastChecked": "2026-02-09T01:39:56.137Z",
+      "lastChecked": "2026-02-09T01:45:31.744Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
         {
           "timestamp": "2026-02-09T01:39:56.137Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-09T01:45:31.744Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 0,
-      "checksToday": 1,
+      "checksToday": 2,
       "tags": [
         "client"
       ],
@@ -112,17 +132,21 @@
       "name": "Fenton Plan A Van",
       "url": "https://www.fentonmobility.com/plan-a-van/",
       "status": "ok",
-      "lastChecked": "2026-02-09T01:39:56.137Z",
+      "lastChecked": "2026-02-09T01:45:31.744Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
         {
           "timestamp": "2026-02-09T01:39:56.137Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-09T01:45:31.744Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 0,
-      "checksToday": 1,
+      "checksToday": 2,
       "tags": [
         "client"
       ],
@@ -130,6 +154,42 @@
     }
   },
   "activityLog": [
+    {
+      "timestamp": "2026-02-09T01:45:31.744Z",
+      "siteId": "fenton-plan-a-van",
+      "type": "baseline",
+      "detail": "Initial baseline captured"
+    },
+    {
+      "timestamp": "2026-02-09T01:45:31.744Z",
+      "siteId": "allegany-rv-drawing",
+      "type": "baseline",
+      "detail": "Initial baseline captured"
+    },
+    {
+      "timestamp": "2026-02-09T01:45:31.744Z",
+      "siteId": "allegany-claim-pass",
+      "type": "baseline",
+      "detail": "Initial baseline captured"
+    },
+    {
+      "timestamp": "2026-02-09T01:45:31.744Z",
+      "siteId": "allegany-mountain-resort",
+      "type": "baseline",
+      "detail": "Initial baseline captured"
+    },
+    {
+      "timestamp": "2026-02-09T01:45:31.744Z",
+      "siteId": "fenton-mobility-shop",
+      "type": "baseline",
+      "detail": "Initial baseline captured"
+    },
+    {
+      "timestamp": "2026-02-09T01:45:31.744Z",
+      "siteId": "fenton-mobility",
+      "type": "baseline",
+      "detail": "Initial baseline captured"
+    },
     {
       "timestamp": "2026-02-09T01:39:56.137Z",
       "siteId": "fenton-plan-a-van",
