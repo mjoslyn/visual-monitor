@@ -38,13 +38,14 @@ export async function captureScreenshot(site) {
       timeout: 60_000,
     });
 
-    // Hide selectors to reduce false positives (default: header + footer)
-    const selectors = site.hideSelectors?.length > 0 ? site.hideSelectors : ['header', 'footer'];
-    const allSelectors = [...selectors, '.ignore-vm'];
-    const selectorsCSS = allSelectors
-      .map((sel) => `${sel} { display: none !important; visibility: hidden !important; }`)
-      .join('\n');
-    await page.addStyleTag({ content: selectorsCSS });
+    // Hide selectors to reduce false positives
+    const selectors = [...(site.hideSelectors || []), '.ignore-vm'];
+    if (selectors.length > 0) {
+      const selectorsCSS = selectors
+        .map((sel) => `${sel} { display: none !important; visibility: hidden !important; }`)
+        .join('\n');
+      await page.addStyleTag({ content: selectorsCSS });
+    }
     await page.waitForTimeout(500);
 
     // Capture screenshot

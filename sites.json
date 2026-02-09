@@ -8,7 +8,7 @@
     "viewport": { "width": 1280, "height": 720 },
     "fullPage": true,
     "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
+    "hideSelectors": [],
     "auth": null,
     "tags": [],
     "notifications": {
@@ -24,7 +24,7 @@
     "viewport": { "width": 1280, "height": 720 },
     "fullPage": true,
     "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
+    "hideSelectors": [],
     "auth": null,
     "tags": [],
     "notifications": {
@@ -40,7 +40,7 @@
     "viewport": { "width": 1280, "height": 720 },
     "fullPage": true,
     "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
+    "hideSelectors": [],
     "auth": null,
     "tags": [],
     "notifications": {
@@ -56,7 +56,7 @@
     "viewport": { "width": 1280, "height": 720 },
     "fullPage": true,
     "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
+    "hideSelectors": [],
     "auth": null,
     "tags": [],
     "notifications": {
@@ -72,7 +72,7 @@
     "viewport": { "width": 1280, "height": 720 },
     "fullPage": true,
     "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
+    "hideSelectors": [],
     "auth": null,
     "tags": [],
     "notifications": {
@@ -88,7 +88,7 @@
     "viewport": { "width": 1280, "height": 720 },
     "fullPage": true,
     "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
+    "hideSelectors": [],
     "auth": null,
     "tags": [],
     "notifications": {
@@ -104,7 +104,7 @@
     "viewport": { "width": 1280, "height": 720 },
     "fullPage": true,
     "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
+    "hideSelectors": [],
     "auth": null,
     "tags": [],
     "notifications": {
@@ -120,7 +120,7 @@
     "viewport": { "width": 1280, "height": 720 },
     "fullPage": true,
     "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
+    "hideSelectors": [],
     "auth": null,
     "tags": [],
     "notifications": {
@@ -136,7 +136,7 @@
     "viewport": { "width": 1280, "height": 720 },
     "fullPage": true,
     "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
+    "hideSelectors": [],
     "auth": null,
     "tags": [],
     "notifications": {
@@ -152,7 +152,7 @@
     "viewport": { "width": 1280, "height": 720 },
     "fullPage": true,
     "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
+    "hideSelectors": [],
     "auth": null,
     "tags": [],
     "notifications": {
@@ -168,7 +168,7 @@
     "viewport": { "width": 1280, "height": 720 },
     "fullPage": true,
     "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
+    "hideSelectors": [],
     "auth": null,
     "tags": [],
     "notifications": {
