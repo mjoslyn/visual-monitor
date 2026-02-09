@@ -147,6 +147,9 @@ async function run() {
           console.log(`[monitor]   Threshold exceeded — sending notifications...`);
           const baselinePath = join(PATHS.baselines, `${site.id}.png`);
           await notify(site, changePercent, '', { before: baselinePath, after: screenshotPath });
+
+          // Promote current screenshot as new baseline only when change detected
+          promoteBaseline(site.id, screenshotPath);
         } else {
           siteState.status = 'ok';
 
@@ -157,9 +160,6 @@ async function run() {
             detail: `${changePercent}% change (below ${site.threshold}% threshold)`,
           });
         }
-
-        // Promote current screenshot as new baseline
-        promoteBaseline(site.id, screenshotPath);
       }
 
       siteState.error = null;
