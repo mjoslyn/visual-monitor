@@ -40,7 +40,8 @@ export async function captureScreenshot(site) {
 
     // Hide selectors to reduce false positives (default: header + footer)
     const selectors = site.hideSelectors?.length > 0 ? site.hideSelectors : ['header', 'footer'];
-    const selectorsCSS = selectors
+    const allSelectors = [...selectors, '.ignore-vm'];
+    const selectorsCSS = allSelectors
       .map((sel) => `${sel} { display: none !important; visibility: hidden !important; }`)
       .join('\n');
     await page.addStyleTag({ content: selectorsCSS });

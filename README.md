@@ -1,6 +1,6 @@
 # Visual Change Monitor
 
-A self-hosted, near-zero-cost visual change monitoring service. Screenshots web pages on a schedule, diffs them against baselines, and alerts when changes exceed a threshold.
+A self-hosted, near-zero-cost visual change monitoring service. Screenshots web pages on a schedule, diffs them against baselines, and alerts via email when changes exceed a threshold.
 
 **Cost: $0** — runs entirely on GitHub Actions (free tier) + GitHub Pages.
 
@@ -16,13 +16,13 @@ Edit `sites.json` to add the URLs you want to track:
     "id": "my-site",
     "name": "My Site",
     "url": "https://example.com",
-    "threshold": 1.0,
+    "threshold": 3.0,
     "viewport": { "width": 1280, "height": 720 },
-    "fullPage": false,
+    "fullPage": true,
     "waitFor": "networkidle",
     "hideSelectors": [".cookie-banner", ".ad-slot"],
     "tags": ["production"],
-    "notifications": { "discord": true, "slack": false }
+    "notifications": { "mailgun": true }
   }
 ]
 ```
@@ -33,23 +33,32 @@ Add these as GitHub Actions secrets in your repo settings:
 
 | Secret | Description |
 |--------|-------------|
-| `DISCORD_WEBHOOK` | Discord channel webhook URL |
-| `SLACK_WEBHOOK` | Slack incoming webhook URL |
-| `NTFY_TOPIC` | ntfy.sh topic name for push notifications |
+| `MAILGUN_API_KEY` | Mailgun API key |
+| `MAILGUN_DOMAIN` | Mailgun sending domain |
+| `MAILGUN_TO` | Recipient email address |
+| `MAILGUN_FROM` | Sender address (optional, defaults to `Visual Monitor <noreply@{domain}>`) |
 
-### 3. Run locally first
+Emails include inline before/after screenshots when a change is detected.
+
+### 3. Set up the trigger
+
+The monitor runs via `repository_dispatch` (type: `run-monitor`) or `workflow_dispatch`. Use an external cron service like [EasyCron](https://www.easycron.com/) to send a `repository_dispatch` event on your desired schedule, or trigger manually from the GitHub Actions tab.
+
+Example `repository_dispatch` payload:
+
+```json
+{ "event_type": "run-monitor" }
+```
+
+### 4. Run locally first
 
 ```bash
 npm install
 npx playwright install chromium --with-deps
-node monitor/index.mjs
+npm run monitor
 ```
 
 Check `data/state.json` and `data/screenshots/` for results.
-
-### 4. Push to GitHub
-
-The monitor runs automatically every 6 hours via GitHub Actions. You can also trigger it manually from the Actions tab using `workflow_dispatch`.
 
 ### 5. Deploy the dashboard
 
@@ -58,18 +67,19 @@ The dashboard deploys automatically to GitHub Pages when changes are pushed to `
 To develop locally:
 
 ```bash
-cd dashboard
-npm install
 npm run dev
 ```
 
 ## How It Works
 
-1. **Capture** — Playwright takes screenshots of each configured URL
-2. **Diff** — pixelmatch compares the new screenshot against the saved baseline
-3. **Alert** — If the pixel diff exceeds the site's threshold, notifications fire
-4. **Rotate** — The new screenshot becomes the next baseline
-5. **Store** — Everything is committed back to the repo as the "database"
+1. **Capture** — Playwright takes full-page screenshots of each configured URL
+2. **Hide** — Elements with class `.ignore-vm` are always hidden, plus `header`/`footer` by default
+3. **Diff** — pixelmatch compares the new screenshot against the saved baseline
+4. **Alert** — If the pixel diff exceeds the site's threshold, a Mailgun email fires with inline before/after images
+5. **Rotate** — The new screenshot becomes the next baseline **only when the threshold is exceeded**
+6. **Store** — Everything is committed back to the repo as the "database"
+
+The dashboard fetches state and images directly from `raw.githubusercontent.com` at runtime, so it always reflects the latest monitor run.
 
 ## Configuration Options
 
@@ -78,14 +88,31 @@ npm run dev
 | `id` | string | Unique identifier for the site |
 | `name` | string | Display name |
 | `url` | string | URL to monitor |
-| `threshold` | number | Change percentage to trigger alerts (e.g., `1.0` = 1%) |
+| `threshold` | number | Change percentage to trigger alerts (e.g., `3.0` = 3%) |
 | `viewport` | object | `{ width, height }` for the browser viewport |
 | `fullPage` | boolean | Capture full page scroll or just viewport |
 | `waitFor` | string | `"networkidle"` or `"load"` |
-| `hideSelectors` | string[] | CSS selectors to hide before screenshotting |
+| `hideSelectors` | string[] | CSS selectors to hide before screenshotting (default: `["header", "footer"]`) |
 | `auth` | object | `{ type: "basic", username, password }` or `{ type: "cookies", cookies: [...] }` |
 | `tags` | string[] | Tags for filtering in the dashboard |
-| `notifications` | object | `{ discord: bool, slack: bool }` per-site notification toggle |
+| `notifications` | object | `{ mailgun: bool }` per-site notification toggle |
+
+## Ignoring Elements
+
+To exclude elements from visual comparison and reduce false positives:
+
+- **Per-site:** Add CSS selectors to `hideSelectors` in `sites.json`
+- **Global:** Add the class `ignore-vm` to any element on the monitored page
+- **Defaults:** `header` and `footer` tags are hidden unless `hideSelectors` is explicitly set
+
+## Dashboard
+
+The dashboard shows:
+
+- Summary stats (total sites, changes, errors, checks today)
+- Site cards with screenshot thumbnails, sparkline history, and status badges
+- Expandable details with before/after/diff pixel comparison when a change is detected
+- Activity log timeline of recent events
 
 ## Project Structure
 
@@ -95,5 +122,5 @@ visual-monitor/
 ├── dashboard/        # React + Vite + Tailwind static dashboard
 ├── data/             # Git-committed state, screenshots, baselines, diffs
 ├── sites.json        # Your monitoring configuration
-└── .github/workflows # Cron job + dashboard deploy
+└── .github/workflows # Monitor trigger + dashboard deploy
 ```
