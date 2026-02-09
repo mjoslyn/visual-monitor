@@ -3,7 +3,7 @@ import StatCards from './components/StatCards.jsx';
 import SiteCard from './components/SiteCard.jsx';
 import ActivityLog from './components/ActivityLog.jsx';
 
-const STATE_URL = './data/state.json';
+const STATE_URL = 'https://raw.githubusercontent.com/mjoslyn/visual-monitor/main/data/state.json';
 
 export default function App() {
   const [state, setState] = useState(null);

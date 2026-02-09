@@ -85,7 +85,7 @@ export default function SiteCard({ site }) {
           {/* Thumbnail */}
           <div className="flex-shrink-0 hidden sm:block">
             <img
-              src={`./data/screenshots/${site.id}.png`}
+              src={`https://raw.githubusercontent.com/mjoslyn/visual-monitor/main/data/screenshots/${site.id}.png`}
               alt={`${site.name} screenshot`}
               className="w-32 h-20 object-cover object-top rounded-lg border border-surface-3 bg-surface-2"
               onError={(e) => { e.target.style.display = 'none'; }}
