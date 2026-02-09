@@ -1,56 +1,5 @@
 [
   {
-    "id": "hacker-news",
-    "name": "Hacker News",
-    "url": "https://news.ycombinator.com",
-    "schedule": "*/6 * * *",
-    "threshold": 5.0,
-    "viewport": { "width": 1280, "height": 720 },
-    "fullPage": false,
-    "waitFor": "networkidle",
-    "hideSelectors": [],
-    "auth": null,
-    "tags": ["news", "tech"],
-    "notifications": {
-      "discord": true,
-      "slack": false
-    }
-  },
-  {
-    "id": "example-stable",
-    "name": "Example.com (Stable)",
-    "url": "https://example.com",
-    "schedule": "*/6 * * *",
-    "threshold": 1.0,
-    "viewport": { "width": 1280, "height": 720 },
-    "fullPage": false,
-    "waitFor": "networkidle",
-    "hideSelectors": [],
-    "auth": null,
-    "tags": ["test", "stable"],
-    "notifications": {
-      "discord": true,
-      "slack": false
-    }
-  },
-  {
-    "id": "github-trending",
-    "name": "GitHub Trending",
-    "url": "https://github.com/trending",
-    "schedule": "*/6 * * *",
-    "threshold": 3.0,
-    "viewport": { "width": 1280, "height": 720 },
-    "fullPage": true,
-    "waitFor": "networkidle",
-    "hideSelectors": [".js-notice", "[data-hovercard-type]"],
-    "auth": null,
-    "tags": ["dev", "trending"],
-    "notifications": {
-      "discord": true,
-      "slack": true
-    }
-  },
-  {
     "id": "fenton-mobility",
     "name": "Fenton Mobility",
     "url": "https://www.fentonmobility.com",
@@ -79,6 +28,57 @@
     "hideSelectors": [],
     "auth": null,
     "tags": ["client", "shop"],
+    "notifications": {
+      "discord": true,
+      "slack": false
+    }
+  },
+  {
+    "id": "allegany-mountain-resort",
+    "name": "Allegany Mountain Resort",
+    "url": "https://alleganymountainresort.com/",
+    "schedule": "*/6 * * *",
+    "threshold": 3.0,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": false,
+    "waitFor": "networkidle",
+    "hideSelectors": [],
+    "auth": null,
+    "tags": ["client"],
+    "notifications": {
+      "discord": true,
+      "slack": false
+    }
+  },
+  {
+    "id": "allegany-claim-pass",
+    "name": "Allegany Claim Your Pass",
+    "url": "https://alleganymountainresort.com/claim-your-pass/",
+    "schedule": "*/6 * * *",
+    "threshold": 3.0,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": false,
+    "waitFor": "networkidle",
+    "hideSelectors": [],
+    "auth": null,
+    "tags": ["client"],
+    "notifications": {
+      "discord": true,
+      "slack": false
+    }
+  },
+  {
+    "id": "allegany-rv-drawing",
+    "name": "Allegany RV Drawing Entry",
+    "url": "https://alleganymountainresort.com/entry-for-drawing-7-days-rv-lakefront-campsite/",
+    "schedule": "*/6 * * *",
+    "threshold": 3.0,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": false,
+    "waitFor": "networkidle",
+    "hideSelectors": [],
+    "auth": null,
+    "tags": ["client"],
     "notifications": {
       "discord": true,
       "slack": false
