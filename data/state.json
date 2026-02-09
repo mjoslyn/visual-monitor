@@ -1,12 +1,12 @@
 {
-  "lastRun": "2026-02-09T14:28:28.160Z",
+  "lastRun": "2026-02-09T14:41:17.309Z",
   "sites": {
     "fenton-mobility": {
       "id": "fenton-mobility",
       "name": "Fenton Mobility",
       "url": "https://www.fentonmobility.com",
-      "status": "ok",
-      "lastChecked": "2026-02-09T14:28:28.160Z",
+      "status": "error",
+      "lastChecked": "2026-02-09T14:41:17.309Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
@@ -98,14 +98,14 @@
       "totalChanges": 0,
       "checksToday": 21,
       "tags": [],
-      "error": null
+      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.fentonmobility.com/\", waiting until \"networkidle\"\n"
     },
     "fenton-mobility-shop": {
       "id": "fenton-mobility-shop",
       "name": "Fenton Mobility Shop",
       "url": "https://www.fentonmobility.com/shop/",
-      "status": "ok",
-      "lastChecked": "2026-02-09T14:28:28.160Z",
+      "status": "error",
+      "lastChecked": "2026-02-09T14:41:17.309Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
@@ -197,14 +197,14 @@
       "totalChanges": 0,
       "checksToday": 21,
       "tags": [],
-      "error": null
+      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.fentonmobility.com/shop/\", waiting until \"networkidle\"\n"
     },
     "allegany-mountain-resort": {
       "id": "allegany-mountain-resort",
       "name": "Allegany Mountain Resort",
       "url": "https://alleganymountainresort.com/",
       "status": "ok",
-      "lastChecked": "2026-02-09T14:28:28.160Z",
+      "lastChecked": "2026-02-09T14:41:17.309Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
@@ -291,10 +291,14 @@
         {
           "timestamp": "2026-02-09T14:28:28.160Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-09T14:41:17.309Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 0,
-      "checksToday": 21,
+      "checksToday": 22,
       "tags": [],
       "error": null
     },
@@ -303,7 +307,7 @@
       "name": "Allegany Claim Your Pass",
       "url": "https://alleganymountainresort.com/claim-your-pass/",
       "status": "ok",
-      "lastChecked": "2026-02-09T14:28:28.160Z",
+      "lastChecked": "2026-02-09T14:41:17.309Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
@@ -390,10 +394,14 @@
         {
           "timestamp": "2026-02-09T14:28:28.160Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-09T14:41:17.309Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 0,
-      "checksToday": 21,
+      "checksToday": 22,
       "tags": [],
       "error": null
     },
@@ -402,7 +410,7 @@
       "name": "Allegany RV Drawing Entry",
       "url": "https://alleganymountainresort.com/entry-for-drawing-7-days-rv-lakefront-campsite/",
       "status": "ok",
-      "lastChecked": "2026-02-09T14:28:28.160Z",
+      "lastChecked": "2026-02-09T14:41:17.309Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
@@ -489,10 +497,14 @@
         {
           "timestamp": "2026-02-09T14:28:28.160Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-09T14:41:17.309Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 0,
-      "checksToday": 21,
+      "checksToday": 22,
       "tags": [],
       "error": null
     },
@@ -500,8 +512,8 @@
       "id": "fenton-plan-a-van",
       "name": "Fenton Plan A Van",
       "url": "https://www.fentonmobility.com/plan-a-van/",
-      "status": "ok",
-      "lastChecked": "2026-02-09T14:28:28.160Z",
+      "status": "error",
+      "lastChecked": "2026-02-09T14:41:17.309Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
@@ -593,14 +605,14 @@
       "totalChanges": 0,
       "checksToday": 21,
       "tags": [],
-      "error": null
+      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.fentonmobility.com/plan-a-van/\", waiting until \"networkidle\"\n"
     },
     "fenton-schedule-service": {
       "id": "fenton-schedule-service",
       "name": "Fenton Schedule Service",
       "url": "https://www.fentonmobility.com/forms/schedule-service/",
-      "status": "ok",
-      "lastChecked": "2026-02-09T14:28:28.160Z",
+      "status": "error",
+      "lastChecked": "2026-02-09T14:41:17.309Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
@@ -684,14 +696,14 @@
       "totalChanges": 0,
       "checksToday": 19,
       "tags": [],
-      "error": null
+      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.fentonmobility.com/forms/schedule-service/\", waiting until \"networkidle\"\n"
     },
     "fenton-ford-transit-140": {
       "id": "fenton-ford-transit-140",
       "name": "Fenton Ford Transit 140 Full Floor",
       "url": "https://www.fentonmobility.com/layouts/ford-transit-140-full-floor/",
-      "status": "ok",
-      "lastChecked": "2026-02-09T14:28:28.160Z",
+      "status": "error",
+      "lastChecked": "2026-02-09T14:41:17.309Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
@@ -775,14 +787,14 @@
       "totalChanges": 0,
       "checksToday": 19,
       "tags": [],
-      "error": null
+      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.fentonmobility.com/layouts/ford-transit-140-full-floor/\", waiting until \"networkidle\"\n"
     },
     "snowflake-ski-shop": {
       "id": "snowflake-ski-shop",
       "name": "Snowflake Ski Shop",
       "url": "https://snowflakeskishop.com/",
       "status": "ok",
-      "lastChecked": "2026-02-09T14:28:28.160Z",
+      "lastChecked": "2026-02-09T14:41:17.309Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
@@ -861,10 +873,14 @@
         {
           "timestamp": "2026-02-09T14:28:28.160Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-09T14:41:17.309Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 0,
-      "checksToday": 19,
+      "checksToday": 20,
       "tags": [],
       "error": null
     },
@@ -873,7 +889,7 @@
       "name": "Fenton Test Monitor",
       "url": "https://www.fentonmobility.com/test-monitor/",
       "status": "ok",
-      "lastChecked": "2026-02-09T14:28:28.160Z",
+      "lastChecked": "2026-02-09T14:41:17.309Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
@@ -908,10 +924,14 @@
         {
           "timestamp": "2026-02-09T14:28:28.160Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-09T14:41:17.309Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 0,
-      "checksToday": 8,
+      "checksToday": 9,
       "tags": [],
       "error": null
     },
@@ -919,8 +939,8 @@
       "id": "ellicottville-ny",
       "name": "Ellicottville NY",
       "url": "https://www.ellicottvilleny.com/",
-      "status": "ok",
-      "lastChecked": "2026-02-09T14:28:28.160Z",
+      "status": "error",
+      "lastChecked": "2026-02-09T14:41:17.309Z",
       "lastChanged": null,
       "changePercent": 0,
       "history": [
@@ -952,11 +972,77 @@
       "totalChanges": 0,
       "checksToday": 6,
       "tags": [],
-      "error": null
+      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.ellicottvilleny.com/\", waiting until \"networkidle\"\n"
     }
   },
   "activityLog": [
     {
+      "timestamp": "2026-02-09T14:41:17.309Z",
+      "siteId": "snowflake-ski-shop",
+      "type": "baseline",
+      "detail": "Initial baseline captured"
+    },
+    {
+      "timestamp": "2026-02-09T14:41:17.309Z",
+      "siteId": "fenton-test-monitor",
+      "type": "baseline",
+      "detail": "Initial baseline captured"
+    },
+    {
+      "timestamp": "2026-02-09T14:41:17.309Z",
+      "siteId": "fenton-mobility-shop",
+      "type": "error",
+      "detail": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.fentonmobility.com/shop/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "timestamp": "2026-02-09T14:41:17.309Z",
+      "siteId": "fenton-plan-a-van",
+      "type": "error",
+      "detail": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.fentonmobility.com/plan-a-van/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "timestamp": "2026-02-09T14:41:17.309Z",
+      "siteId": "fenton-ford-transit-140",
+      "type": "error",
+      "detail": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.fentonmobility.com/layouts/ford-transit-140-full-floor/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "timestamp": "2026-02-09T14:41:17.309Z",
+      "siteId": "fenton-schedule-service",
+      "type": "error",
+      "detail": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.fentonmobility.com/forms/schedule-service/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "timestamp": "2026-02-09T14:41:17.309Z",
+      "siteId": "fenton-mobility",
+      "type": "error",
+      "detail": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.fentonmobility.com/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "timestamp": "2026-02-09T14:41:17.309Z",
+      "siteId": "ellicottville-ny",
+      "type": "error",
+      "detail": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.ellicottvilleny.com/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "timestamp": "2026-02-09T14:41:17.309Z",
+      "siteId": "allegany-rv-drawing",
+      "type": "baseline",
+      "detail": "Initial baseline captured"
+    },
+    {
+      "timestamp": "2026-02-09T14:41:17.309Z",
+      "siteId": "allegany-claim-pass",
+      "type": "baseline",
+      "detail": "Initial baseline captured"
+    },
+    {
+      "timestamp": "2026-02-09T14:41:17.309Z",
+      "siteId": "allegany-mountain-resort",
+      "type": "baseline",
+      "detail": "Initial baseline captured"
+    },
+    {
       "timestamp": "2026-02-09T14:28:28.160Z",
       "siteId": "snowflake-ski-shop",
       "type": "baseline",
@@ -2087,54 +2173,6 @@
     {
       "timestamp": "2026-02-09T01:45:31.744Z",
       "siteId": "allegany-mountain-resort",
-      "type": "baseline",
-      "detail": "Initial baseline captured"
-    },
-    {
-      "timestamp": "2026-02-09T01:45:31.744Z",
-      "siteId": "fenton-mobility-shop",
-      "type": "baseline",
-      "detail": "Initial baseline captured"
-    },
-    {
-      "timestamp": "2026-02-09T01:45:31.744Z",
-      "siteId": "fenton-mobility",
-      "type": "baseline",
-      "detail": "Initial baseline captured"
-    },
-    {
-      "timestamp": "2026-02-09T01:39:56.137Z",
-      "siteId": "fenton-plan-a-van",
-      "type": "baseline",
-      "detail": "Initial baseline captured"
-    },
-    {
-      "timestamp": "2026-02-09T01:39:56.137Z",
-      "siteId": "allegany-rv-drawing",
-      "type": "baseline",
-      "detail": "Initial baseline captured"
-    },
-    {
-      "timestamp": "2026-02-09T01:39:56.137Z",
-      "siteId": "allegany-claim-pass",
-      "type": "baseline",
-      "detail": "Initial baseline captured"
-    },
-    {
-      "timestamp": "2026-02-09T01:39:56.137Z",
-      "siteId": "allegany-mountain-resort",
-      "type": "baseline",
-      "detail": "Initial baseline captured"
-    },
-    {
-      "timestamp": "2026-02-09T01:39:56.137Z",
-      "siteId": "fenton-mobility-shop",
-      "type": "baseline",
-      "detail": "Initial baseline captured"
-    },
-    {
-      "timestamp": "2026-02-09T01:39:56.137Z",
-      "siteId": "fenton-mobility",
       "type": "baseline",
       "detail": "Initial baseline captured"
     }
