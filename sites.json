@@ -126,5 +126,21 @@
     "notifications": {
       "mailgun": true
     }
+  },
+  {
+    "id": "snowflake-ski-shop",
+    "name": "Snowflake Ski Shop",
+    "url": "https://snowflakeskishop.com/",
+    "schedule": "*/6 * * *",
+    "threshold": 3.0,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": true,
+    "waitFor": "networkidle",
+    "hideSelectors": [],
+    "auth": null,
+    "tags": [],
+    "notifications": {
+      "mailgun": true
+    }
   }
 ]
