@@ -39,5 +39,8 @@ export const MAX_HISTORY = 50;
 /** Maximum number of diff images retained per site */
 export const MAX_DIFFS = 10;
 
+/** Maximum number of screenshots retained per site */
+export const MAX_SCREENSHOTS = 10;
+
 /** Maximum activity log entries */
 export const MAX_LOG_ENTRIES = 200;

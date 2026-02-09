@@ -6,11 +6,11 @@
     "schedule": "*/6 * * *",
     "threshold": 3.0,
     "viewport": { "width": 1280, "height": 720 },
-    "fullPage": false,
+    "fullPage": true,
     "waitFor": "networkidle",
     "hideSelectors": [],
     "auth": null,
-    "tags": ["client"],
+    "tags": [],
     "notifications": {
       "discord": true,
       "slack": false
@@ -23,11 +23,11 @@
     "schedule": "*/6 * * *",
     "threshold": 3.0,
     "viewport": { "width": 1280, "height": 720 },
-    "fullPage": false,
+    "fullPage": true,
     "waitFor": "networkidle",
     "hideSelectors": [],
     "auth": null,
-    "tags": ["client", "shop"],
+    "tags": [],
     "notifications": {
       "discord": true,
       "slack": false
@@ -40,11 +40,11 @@
     "schedule": "*/6 * * *",
     "threshold": 3.0,
     "viewport": { "width": 1280, "height": 720 },
-    "fullPage": false,
+    "fullPage": true,
     "waitFor": "networkidle",
     "hideSelectors": [],
     "auth": null,
-    "tags": ["client"],
+    "tags": [],
     "notifications": {
       "discord": true,
       "slack": false
@@ -57,11 +57,11 @@
     "schedule": "*/6 * * *",
     "threshold": 3.0,
     "viewport": { "width": 1280, "height": 720 },
-    "fullPage": false,
+    "fullPage": true,
     "waitFor": "networkidle",
     "hideSelectors": [],
     "auth": null,
-    "tags": ["client"],
+    "tags": [],
     "notifications": {
       "discord": true,
       "slack": false
@@ -74,11 +74,11 @@
     "schedule": "*/6 * * *",
     "threshold": 3.0,
     "viewport": { "width": 1280, "height": 720 },
-    "fullPage": false,
+    "fullPage": true,
     "waitFor": "networkidle",
     "hideSelectors": [],
     "auth": null,
-    "tags": ["client"],
+    "tags": [],
     "notifications": {
       "discord": true,
       "slack": false
@@ -91,11 +91,11 @@
     "schedule": "*/6 * * *",
     "threshold": 3.0,
     "viewport": { "width": 1280, "height": 720 },
-    "fullPage": false,
+    "fullPage": true,
     "waitFor": "networkidle",
     "hideSelectors": [],
     "auth": null,
-    "tags": ["client"],
+    "tags": [],
     "notifications": {
       "discord": true,
       "slack": false
@@ -108,11 +108,28 @@
     "schedule": "*/6 * * *",
     "threshold": 3.0,
     "viewport": { "width": 1280, "height": 720 },
-    "fullPage": false,
+    "fullPage": true,
     "waitFor": "networkidle",
     "hideSelectors": [],
     "auth": null,
-    "tags": ["client"],
+    "tags": [],
+    "notifications": {
+      "discord": true,
+      "slack": false
+    }
+  },
+  {
+    "id": "fenton-ford-transit-140",
+    "name": "Fenton Ford Transit 140 Full Floor",
+    "url": "https://www.fentonmobility.com/layouts/ford-transit-140-full-floor/",
+    "schedule": "*/6 * * *",
+    "threshold": 3.0,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": true,
+    "waitFor": "networkidle",
+    "hideSelectors": [],
+    "auth": null,
+    "tags": [],
     "notifications": {
       "discord": true,
       "slack": false

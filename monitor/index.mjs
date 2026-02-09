@@ -1,12 +1,14 @@
 import { writeFileSync, readdirSync, unlinkSync } from 'fs';
 import { join } from 'path';
 import { mkdir } from 'fs/promises';
+import { copyFileSync } from 'fs';
 import {
   loadSites,
   loadState,
   PATHS,
   MAX_HISTORY,
   MAX_DIFFS,
+  MAX_SCREENSHOTS,
   MAX_LOG_ENTRIES,
 } from './config.mjs';
 import { captureScreenshot } from './screenshot.mjs';
@@ -25,10 +27,24 @@ function cleanOldDiffs(siteId) {
     .sort()
     .reverse();
 
-  // Keep only MAX_DIFFS most recent
   for (const file of files.slice(MAX_DIFFS)) {
     try {
       unlinkSync(join(PATHS.diffs, file));
+    } catch {
+      // ignore
+    }
+  }
+}
+
+function cleanOldScreenshots(siteId) {
+  const files = readdirSync(PATHS.screenshots)
+    .filter((f) => f.startsWith(`${siteId}-`) && f.endsWith('.png'))
+    .sort()
+    .reverse();
+
+  for (const file of files.slice(MAX_SCREENSHOTS)) {
+    try {
+      unlinkSync(join(PATHS.screenshots, file));
     } catch {
       // ignore
     }
@@ -78,6 +94,11 @@ async function run() {
       console.log(`[monitor]   Capturing screenshot...`);
       const screenshotPath = await captureScreenshot(site);
       console.log(`[monitor]   Screenshot saved: ${screenshotPath}`);
+
+      // Save timestamped copy
+      const ts = now.replace(/[:.]/g, '-');
+      const timestampedPath = join(PATHS.screenshots, `${site.id}-${ts}.png`);
+      copyFileSync(screenshotPath, timestampedPath);
 
       // Step 2: Diff against baseline
       console.log(`[monitor]   Computing diff...`);
@@ -142,8 +163,9 @@ async function run() {
 
       siteState.error = null;
 
-      // Clean old diffs
+      // Clean old diffs and screenshots
       cleanOldDiffs(site.id);
+      cleanOldScreenshots(site.id);
     } catch (err) {
       console.error(`[monitor]   ERROR: ${err.message}`);
       siteState.status = 'error';

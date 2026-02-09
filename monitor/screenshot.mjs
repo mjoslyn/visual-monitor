@@ -52,7 +52,7 @@ export async function captureScreenshot(site) {
     const screenshotPath = join(PATHS.screenshots, `${site.id}.png`);
     await page.screenshot({
       path: screenshotPath,
-      fullPage: site.fullPage ?? false,
+      fullPage: site.fullPage ?? true,
     });
 
     return screenshotPath;
