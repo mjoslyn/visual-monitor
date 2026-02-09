@@ -31,6 +31,10 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}
+          MAILGUN_DOMAIN: ${{ secrets.MAILGUN_DOMAIN }}
+          MAILGUN_TO: ${{ secrets.MAILGUN_TO }}
+          MAILGUN_FROM: ${{ secrets.MAILGUN_FROM }}
 
       - name: Commit results
         run: |
