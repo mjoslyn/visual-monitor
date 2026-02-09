@@ -33,11 +33,15 @@ jobs:
           MAILGUN_TO: ${{ secrets.MAILGUN_TO }}
           MAILGUN_FROM: ${{ secrets.MAILGUN_FROM }}
 
-      - name: Commit results
+      - name: Commit and push results
         run: |
           git config user.name "Visual Monitor Bot"
           git config user.email "bot@visual-monitor"
           git add data/
           git diff --staged --quiet || git commit -m "Monitor run $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          git pull --rebase
-          git push
+          for i in 1 2 3; do
+            git push && break
+            git pull -X theirs --no-edit
+            git push && break
+            sleep 5
+          done
