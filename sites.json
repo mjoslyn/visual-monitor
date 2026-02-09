@@ -1,37 +1,5 @@
 [
   {
-    "id": "fenton-mobility",
-    "name": "Fenton Mobility",
-    "url": "https://www.fentonmobility.com",
-    "schedule": "*/6 * * *",
-    "threshold": 0.5,
-    "viewport": { "width": 1280, "height": 720 },
-    "fullPage": true,
-    "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
-    "auth": null,
-    "tags": [],
-    "notifications": {
-      "mailgun": true
-    }
-  },
-  {
-    "id": "fenton-mobility-shop",
-    "name": "Fenton Mobility Shop",
-    "url": "https://www.fentonmobility.com/shop/",
-    "schedule": "*/6 * * *",
-    "threshold": 0.5,
-    "viewport": { "width": 1280, "height": 720 },
-    "fullPage": true,
-    "waitFor": "networkidle",
-    "hideSelectors": ["header", "footer"],
-    "auth": null,
-    "tags": [],
-    "notifications": {
-      "mailgun": true
-    }
-  },
-  {
     "id": "allegany-mountain-resort",
     "name": "Allegany Mountain Resort",
     "url": "https://alleganymountainresort.com/",
@@ -80,9 +48,25 @@
     }
   },
   {
-    "id": "fenton-plan-a-van",
-    "name": "Fenton Plan A Van",
-    "url": "https://www.fentonmobility.com/plan-a-van/",
+    "id": "ellicottville-ny",
+    "name": "Ellicottville NY",
+    "url": "https://www.ellicottvilleny.com/",
+    "schedule": "*/6 * * *",
+    "threshold": 0.5,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": true,
+    "waitFor": "networkidle",
+    "hideSelectors": ["header", "footer"],
+    "auth": null,
+    "tags": [],
+    "notifications": {
+      "mailgun": true
+    }
+  },
+  {
+    "id": "fenton-mobility",
+    "name": "Fenton Mobility",
+    "url": "https://www.fentonmobility.com",
     "schedule": "*/6 * * *",
     "threshold": 0.5,
     "viewport": { "width": 1280, "height": 720 },
@@ -128,9 +112,25 @@
     }
   },
   {
-    "id": "snowflake-ski-shop",
-    "name": "Snowflake Ski Shop",
-    "url": "https://snowflakeskishop.com/",
+    "id": "fenton-plan-a-van",
+    "name": "Fenton Plan A Van",
+    "url": "https://www.fentonmobility.com/plan-a-van/",
+    "schedule": "*/6 * * *",
+    "threshold": 0.5,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": true,
+    "waitFor": "networkidle",
+    "hideSelectors": ["header", "footer"],
+    "auth": null,
+    "tags": [],
+    "notifications": {
+      "mailgun": true
+    }
+  },
+  {
+    "id": "fenton-mobility-shop",
+    "name": "Fenton Mobility Shop",
+    "url": "https://www.fentonmobility.com/shop/",
     "schedule": "*/6 * * *",
     "threshold": 0.5,
     "viewport": { "width": 1280, "height": 720 },
@@ -160,9 +160,9 @@
     }
   },
   {
-    "id": "ellicottville-ny",
-    "name": "Ellicottville NY",
-    "url": "https://www.ellicottvilleny.com/",
+    "id": "snowflake-ski-shop",
+    "name": "Snowflake Ski Shop",
+    "url": "https://snowflakeskishop.com/",
     "schedule": "*/6 * * *",
     "threshold": 0.5,
     "viewport": { "width": 1280, "height": 720 },
