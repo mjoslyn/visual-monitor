@@ -100,5 +100,22 @@
       "discord": true,
       "slack": false
     }
+  },
+  {
+    "id": "fenton-schedule-service",
+    "name": "Fenton Schedule Service",
+    "url": "https://www.fentonmobility.com/forms/schedule-service/",
+    "schedule": "*/6 * * *",
+    "threshold": 3.0,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": false,
+    "waitFor": "networkidle",
+    "hideSelectors": [],
+    "auth": null,
+    "tags": ["client"],
+    "notifications": {
+      "discord": true,
+      "slack": false
+    }
   }
 ]
