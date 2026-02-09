@@ -134,6 +134,33 @@ export default function SiteCard({ site }) {
                 <MiniStat label="Current Diff" value={`${site.changePercent}%`} />
               </div>
 
+              {/* Before / After comparison */}
+              {site.status === 'changed' && (
+                <div className="mt-2">
+                  <div className="text-[10px] font-mono uppercase tracking-wider text-muted mb-2">Before / After</div>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <div className="text-[10px] font-mono text-muted mb-1">Baseline</div>
+                      <img
+                        src={`https://raw.githubusercontent.com/mjoslyn/visual-monitor/main/data/baselines/${site.id}.png`}
+                        alt="Baseline"
+                        className="w-full rounded-lg border border-surface-3 bg-surface-2"
+                        onError={(e) => { e.target.style.display = 'none'; }}
+                      />
+                    </div>
+                    <div>
+                      <div className="text-[10px] font-mono text-muted mb-1">Current</div>
+                      <img
+                        src={`https://raw.githubusercontent.com/mjoslyn/visual-monitor/main/data/screenshots/${site.id}.png`}
+                        alt="Current"
+                        className="w-full rounded-lg border border-accent-rose/30 bg-surface-2"
+                        onError={(e) => { e.target.style.display = 'none'; }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* History table */}
               <div className="mt-2">
                 <div className="text-[10px] font-mono uppercase tracking-wider text-muted mb-2">Recent History</div>
