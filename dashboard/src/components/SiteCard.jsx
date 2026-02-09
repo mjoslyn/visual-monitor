@@ -134,11 +134,11 @@ export default function SiteCard({ site }) {
                 <MiniStat label="Current Diff" value={`${site.changePercent}%`} />
               </div>
 
-              {/* Before / After comparison */}
+              {/* Before / After / Diff comparison */}
               {site.status === 'changed' && (
                 <div className="mt-2">
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-muted mb-2">Before / After</div>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="text-[10px] font-mono uppercase tracking-wider text-muted mb-2">Before / After / Diff</div>
+                  <div className="grid grid-cols-3 gap-3">
                     <div>
                       <div className="text-[10px] font-mono text-muted mb-1">Baseline</div>
                       <img
@@ -154,6 +154,15 @@ export default function SiteCard({ site }) {
                         src={`https://raw.githubusercontent.com/mjoslyn/visual-monitor/main/data/screenshots/${site.id}.png`}
                         alt="Current"
                         className="w-full rounded-lg border border-accent-rose/30 bg-surface-2"
+                        onError={(e) => { e.target.style.display = 'none'; }}
+                      />
+                    </div>
+                    <div>
+                      <div className="text-[10px] font-mono text-muted mb-1">Changed Pixels</div>
+                      <img
+                        src={`https://raw.githubusercontent.com/mjoslyn/visual-monitor/main/data/diffs/${site.id}.png`}
+                        alt="Diff overlay"
+                        className="w-full rounded-lg border border-accent-cyan/30 bg-surface-2"
                         onError={(e) => { e.target.style.display = 'none'; }}
                       />
                     </div>

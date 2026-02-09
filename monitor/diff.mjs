@@ -52,9 +52,14 @@ export function diffScreenshot(siteId, screenshotPath, timestamp) {
   const changePercent = parseFloat(((diffPixels / totalPixels) * 100).toFixed(2));
 
   // Save diff overlay image
+  const diffPng = PNG.sync.write(diffOutput);
   const ts = timestamp.replace(/[:.]/g, '-');
   const diffImagePath = join(PATHS.diffs, `${siteId}-${ts}.png`);
-  writeFileSync(diffImagePath, PNG.sync.write(diffOutput));
+  writeFileSync(diffImagePath, diffPng);
+
+  // Save a "latest" copy for the dashboard
+  const latestDiffPath = join(PATHS.diffs, `${siteId}.png`);
+  writeFileSync(latestDiffPath, diffPng);
 
   return { changePercent, diffImagePath, hasBaseline: true };
 }

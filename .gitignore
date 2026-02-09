@@ -1,5 +1,4 @@
 node_modules/
 dashboard/dist/
-data/diffs/
 *.log
 .DS_Store
