@@ -86,7 +86,7 @@ npm run dev
 1. External cron (EasyCron) sends `repository_dispatch` event to trigger `monitor/index.mjs`, or manual trigger via `workflow_dispatch`
 2. For each site in `sites.json`:
    - Playwright screenshots the URL -> `data/screenshots/{id}.png`
-   - Elements with class `.ignore-vm` are automatically hidden, plus `header` and `footer` by default (overridden by `hideSelectors`)
+   - Elements with class `.ignore-vm` are automatically hidden, plus any `hideSelectors` from the site config
    - pixelmatch diffs against `data/baselines/{id}.png` -> diff % + overlay in `data/diffs/`
    - If diff >= threshold -> Mailgun notification fires with inline before/after images
    - Current screenshot promoted to new baseline **only when change exceeds threshold**
@@ -129,7 +129,6 @@ To exclude elements from visual comparison:
 
 - **Per-site:** Add CSS selectors to `hideSelectors` in `sites.json` (e.g. `[".cookie-banner", ".ad-slot"]`)
 - **Global:** Add the class `ignore-vm` to any element on a monitored page — it is automatically hidden on every capture
-- **Defaults:** If no `hideSelectors` are configured for a site, `header` and `footer` tags are hidden by default
 
 ## Common Tasks
 

@@ -40,7 +40,7 @@ async function sendMailgun(site, changePercent, dashboardUrl, screenshots) {
   form.append('to', MAILGUN_TO);
   form.append('subject', `[${severity}] Visual Change: ${site.name} (${changePercent}%)`);
 
-  if (screenshots?.before && screenshots?.after) {
+  if (screenshots?.diff) {
     const html = [
       `<h2>${changePercent}% visual difference detected</h2>`,
       `<p><strong>Site:</strong> ${site.name}<br>`,
@@ -48,26 +48,14 @@ async function sendMailgun(site, changePercent, dashboardUrl, screenshots) {
       `<strong>Threshold:</strong> ${site.threshold}%<br>`,
       `<strong>Change:</strong> ${changePercent}%</p>`,
       dashboardUrl ? `<p><a href="${dashboardUrl}">View Dashboard</a></p>` : '',
-      `<h3>Before</h3>`,
-      `<img src="cid:before.png" style="max-width:100%;border:1px solid #ccc;" />`,
-      `<h3>After</h3>`,
-      `<img src="cid:after.png" style="max-width:100%;border:1px solid #ccc;" />`,
-      screenshots.diff ? `<h3>Changed Pixels</h3>` : '',
-      screenshots.diff ? `<img src="cid:diff.png" style="max-width:100%;border:1px solid #ccc;" />` : '',
+      `<h3>Changed Pixels</h3>`,
+      `<img src="cid:diff.png" style="max-width:100%;border:1px solid #ccc;" />`,
     ].join('\n');
 
     form.append('html', html);
 
-    const beforeBuf = readFileSync(screenshots.before);
-    const afterBuf = readFileSync(screenshots.after);
-
-    form.append('inline', new Blob([beforeBuf], { type: 'image/png' }), 'before.png');
-    form.append('inline', new Blob([afterBuf], { type: 'image/png' }), 'after.png');
-
-    if (screenshots.diff) {
-      const diffBuf = readFileSync(screenshots.diff);
-      form.append('inline', new Blob([diffBuf], { type: 'image/png' }), 'diff.png');
-    }
+    const diffBuf = readFileSync(screenshots.diff);
+    form.append('inline', new Blob([diffBuf], { type: 'image/png' }), 'diff.png');
   } else {
     form.append('text', [
       `${changePercent}% visual difference detected.`,

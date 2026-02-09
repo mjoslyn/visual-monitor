@@ -92,7 +92,7 @@ The dashboard fetches state and images directly from `raw.githubusercontent.com`
 | `viewport` | object | `{ width, height }` for the browser viewport |
 | `fullPage` | boolean | Capture full page scroll or just viewport |
 | `waitFor` | string | `"networkidle"` or `"load"` |
-| `hideSelectors` | string[] | CSS selectors to hide before screenshotting (default: `["header", "footer"]`) |
+| `hideSelectors` | string[] | CSS selectors to hide before screenshotting |
 | `auth` | object | `{ type: "basic", username, password }` or `{ type: "cookies", cookies: [...] }` |
 | `tags` | string[] | Tags for filtering in the dashboard |
 | `notifications` | object | `{ mailgun: bool }` per-site notification toggle |
@@ -102,8 +102,7 @@ The dashboard fetches state and images directly from `raw.githubusercontent.com`
 To exclude elements from visual comparison and reduce false positives:
 
 - **Per-site:** Add CSS selectors to `hideSelectors` in `sites.json`
-- **Global:** Add the class `ignore-vm` to any element on the monitored page
-- **Defaults:** `header` and `footer` tags are hidden unless `hideSelectors` is explicitly set
+- **Global:** Add the class `ignore-vm` to any element on the monitored page — it is automatically hidden on every capture
 
 ## Dashboard
 
