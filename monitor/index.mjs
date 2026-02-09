@@ -146,7 +146,8 @@ async function run() {
           // Step 3: Notify
           console.log(`[monitor]   Threshold exceeded — sending notifications...`);
           const baselinePath = join(PATHS.baselines, `${site.id}.png`);
-          await notify(site, changePercent, '', { before: baselinePath, after: screenshotPath });
+          const diffPath = join(PATHS.diffs, `${site.id}.png`);
+          await notify(site, changePercent, '', { before: baselinePath, after: screenshotPath, diff: diffPath });
 
           // Promote current screenshot as new baseline only when change detected
           promoteBaseline(site.id, screenshotPath);
