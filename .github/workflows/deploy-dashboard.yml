@@ -6,6 +6,7 @@ on:
     paths:
       - 'dashboard/**'
       - 'data/state.json'
+      - 'data/screenshots/**'
   workflow_dispatch: {}
 
 permissions:

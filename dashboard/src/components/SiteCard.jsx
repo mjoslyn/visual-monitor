@@ -82,6 +82,16 @@ export default function SiteCard({ site }) {
             </div>
           </div>
 
+          {/* Thumbnail */}
+          <div className="flex-shrink-0 hidden sm:block">
+            <img
+              src={`./data/screenshots/${site.id}.png`}
+              alt={`${site.name} screenshot`}
+              className="w-32 h-20 object-cover object-top rounded-lg border border-surface-3 bg-surface-2"
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
+          </div>
+
           {/* Sparkline */}
           <div className="flex-shrink-0 pt-1">
             <Sparkline
