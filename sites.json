@@ -158,5 +158,21 @@
     "notifications": {
       "mailgun": true
     }
+  },
+  {
+    "id": "ellicottville-ny",
+    "name": "Ellicottville NY",
+    "url": "https://www.ellicottvilleny.com/",
+    "schedule": "*/6 * * *",
+    "threshold": 0.5,
+    "viewport": { "width": 1280, "height": 720 },
+    "fullPage": true,
+    "waitFor": "networkidle",
+    "hideSelectors": ["header", "footer"],
+    "auth": null,
+    "tags": [],
+    "notifications": {
+      "mailgun": true
+    }
   }
 ]
