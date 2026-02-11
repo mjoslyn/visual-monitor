@@ -1,19 +1,15 @@
 {
-  "lastRun": "2026-02-11T03:47:49.107Z",
+  "lastRun": "2026-02-11T04:47:46.770Z",
   "sites": {
     "fenton-mobility": {
       "id": "fenton-mobility",
       "name": "Fenton Mobility",
       "url": "https://www.fentonmobility.com",
       "status": "ok",
-      "lastChecked": "2026-02-11T03:47:49.107Z",
+      "lastChecked": "2026-02-11T04:47:46.770Z",
       "lastChanged": "2026-02-09T19:20:13.525Z",
-      "changePercent": 0,
+      "changePercent": 0.27,
       "history": [
-        {
-          "timestamp": "2026-02-09T11:23:26.353Z",
-          "changePercent": 0
-        },
         {
           "timestamp": "2026-02-09T12:25:13.875Z",
           "changePercent": 0
@@ -209,10 +205,14 @@
         {
           "timestamp": "2026-02-11T03:47:49.107Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-11T04:47:46.770Z",
+          "changePercent": 0.27
         }
       ],
       "totalChanges": 1,
-      "checksToday": 4,
+      "checksToday": 5,
       "tags": [],
       "error": null
     },
@@ -220,15 +220,11 @@
       "id": "fenton-mobility-shop",
       "name": "Fenton Mobility Shop",
       "url": "https://www.fentonmobility.com/shop/",
-      "status": "error",
-      "lastChecked": "2026-02-11T03:47:49.107Z",
+      "status": "ok",
+      "lastChecked": "2026-02-11T04:47:46.770Z",
       "lastChanged": "2026-02-09T19:20:13.525Z",
       "changePercent": 0,
       "history": [
-        {
-          "timestamp": "2026-02-09T10:29:19.309Z",
-          "changePercent": 0
-        },
         {
           "timestamp": "2026-02-09T11:23:26.353Z",
           "changePercent": 0
@@ -424,26 +420,26 @@
         {
           "timestamp": "2026-02-11T02:47:41.997Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-11T04:47:46.770Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 1,
-      "checksToday": 3,
+      "checksToday": 4,
       "tags": [],
-      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.fentonmobility.com/shop/\", waiting until \"networkidle\"\n"
+      "error": null
     },
     "allegany-mountain-resort": {
       "id": "allegany-mountain-resort",
       "name": "Allegany Mountain Resort",
       "url": "https://alleganymountainresort.com/",
       "status": "ok",
-      "lastChecked": "2026-02-11T03:47:49.107Z",
+      "lastChecked": "2026-02-11T04:47:46.770Z",
       "lastChanged": "2026-02-10T13:47:40.914Z",
-      "changePercent": 1.29,
+      "changePercent": 1.25,
       "history": [
-        {
-          "timestamp": "2026-02-09T12:57:54.512Z",
-          "changePercent": 0
-        },
         {
           "timestamp": "2026-02-09T13:02:39.205Z",
           "changePercent": 0
@@ -639,10 +635,14 @@
         {
           "timestamp": "2026-02-11T03:47:49.107Z",
           "changePercent": 1.29
+        },
+        {
+          "timestamp": "2026-02-11T04:47:46.770Z",
+          "changePercent": 1.25
         }
       ],
       "totalChanges": 6,
-      "checksToday": 4,
+      "checksToday": 5,
       "tags": [],
       "error": null
     },
@@ -651,14 +651,10 @@
       "name": "Allegany Claim Your Pass",
       "url": "https://alleganymountainresort.com/claim-your-pass/",
       "status": "ok",
-      "lastChecked": "2026-02-11T03:47:49.107Z",
+      "lastChecked": "2026-02-11T04:47:46.770Z",
       "lastChanged": "2026-02-09T18:46:13.966Z",
       "changePercent": 0,
       "history": [
-        {
-          "timestamp": "2026-02-09T12:57:54.512Z",
-          "changePercent": 0
-        },
         {
           "timestamp": "2026-02-09T13:02:39.205Z",
           "changePercent": 0
@@ -854,10 +850,14 @@
         {
           "timestamp": "2026-02-11T03:47:49.107Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-11T04:47:46.770Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 2,
-      "checksToday": 4,
+      "checksToday": 5,
       "tags": [],
       "error": null
     },
@@ -866,14 +866,10 @@
       "name": "Allegany RV Drawing Entry",
       "url": "https://alleganymountainresort.com/entry-for-drawing-7-days-rv-lakefront-campsite/",
       "status": "ok",
-      "lastChecked": "2026-02-11T03:47:49.107Z",
+      "lastChecked": "2026-02-11T04:47:46.770Z",
       "lastChanged": "2026-02-09T18:46:13.966Z",
       "changePercent": 0,
       "history": [
-        {
-          "timestamp": "2026-02-09T12:57:54.512Z",
-          "changePercent": 0
-        },
         {
           "timestamp": "2026-02-09T13:02:39.205Z",
           "changePercent": 0
@@ -1069,10 +1065,14 @@
         {
           "timestamp": "2026-02-11T03:47:49.107Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-11T04:47:46.770Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 6,
-      "checksToday": 4,
+      "checksToday": 5,
       "tags": [],
       "error": null
     },
@@ -1081,14 +1081,10 @@
       "name": "Fenton Plan A Van",
       "url": "https://www.fentonmobility.com/plan-a-van/",
       "status": "ok",
-      "lastChecked": "2026-02-11T03:47:49.107Z",
+      "lastChecked": "2026-02-11T04:47:46.770Z",
       "lastChanged": "2026-02-09T19:20:13.525Z",
       "changePercent": 0.29,
       "history": [
-        {
-          "timestamp": "2026-02-09T10:29:19.309Z",
-          "changePercent": 0
-        },
         {
           "timestamp": "2026-02-09T11:23:26.353Z",
           "changePercent": 0
@@ -1284,10 +1280,14 @@
         {
           "timestamp": "2026-02-11T03:47:49.107Z",
           "changePercent": 0.29
+        },
+        {
+          "timestamp": "2026-02-11T04:47:46.770Z",
+          "changePercent": 0.29
         }
       ],
       "totalChanges": 1,
-      "checksToday": 4,
+      "checksToday": 5,
       "tags": [],
       "error": null
     },
@@ -1296,14 +1296,10 @@
       "name": "Fenton Schedule Service",
       "url": "https://www.fentonmobility.com/forms/schedule-service/",
       "status": "ok",
-      "lastChecked": "2026-02-11T03:47:49.107Z",
+      "lastChecked": "2026-02-11T04:47:46.770Z",
       "lastChanged": "2026-02-09T19:20:13.525Z",
       "changePercent": 0.01,
       "history": [
-        {
-          "timestamp": "2026-02-09T10:29:19.309Z",
-          "changePercent": 0
-        },
         {
           "timestamp": "2026-02-09T11:23:26.353Z",
           "changePercent": 0
@@ -1499,10 +1495,14 @@
         {
           "timestamp": "2026-02-11T03:47:49.107Z",
           "changePercent": 0.01
+        },
+        {
+          "timestamp": "2026-02-11T04:47:46.770Z",
+          "changePercent": 0.01
         }
       ],
       "totalChanges": 1,
-      "checksToday": 4,
+      "checksToday": 5,
       "tags": [],
       "error": null
     },
@@ -1511,14 +1511,10 @@
       "name": "Fenton Ford Transit 140 Full Floor",
       "url": "https://www.fentonmobility.com/layouts/ford-transit-140-full-floor/",
       "status": "ok",
-      "lastChecked": "2026-02-11T03:47:49.107Z",
+      "lastChecked": "2026-02-11T04:47:46.770Z",
       "lastChanged": "2026-02-09T19:20:13.525Z",
       "changePercent": 0,
       "history": [
-        {
-          "timestamp": "2026-02-09T10:29:19.309Z",
-          "changePercent": 0
-        },
         {
           "timestamp": "2026-02-09T11:23:26.353Z",
           "changePercent": 0
@@ -1714,10 +1710,14 @@
         {
           "timestamp": "2026-02-11T03:47:49.107Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-11T04:47:46.770Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 1,
-      "checksToday": 4,
+      "checksToday": 5,
       "tags": [],
       "error": null
     },
@@ -1726,14 +1726,10 @@
       "name": "Snowflake Ski Shop",
       "url": "https://snowflakeskishop.com/",
       "status": "ok",
-      "lastChecked": "2026-02-11T03:47:49.107Z",
+      "lastChecked": "2026-02-11T04:47:46.770Z",
       "lastChanged": "2026-02-11T02:47:41.997Z",
-      "changePercent": 0.01,
+      "changePercent": 0,
       "history": [
-        {
-          "timestamp": "2026-02-09T12:57:54.512Z",
-          "changePercent": 0
-        },
         {
           "timestamp": "2026-02-09T13:02:39.205Z",
           "changePercent": 0
@@ -1929,10 +1925,14 @@
         {
           "timestamp": "2026-02-11T03:47:49.107Z",
           "changePercent": 0.01
+        },
+        {
+          "timestamp": "2026-02-11T04:47:46.770Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 10,
-      "checksToday": 4,
+      "checksToday": 5,
       "tags": [],
       "error": null
     },
@@ -1941,7 +1941,7 @@
       "name": "Fenton Test Monitor",
       "url": "https://www.fentonmobility.com/test-monitor/",
       "status": "ok",
-      "lastChecked": "2026-02-11T03:47:49.107Z",
+      "lastChecked": "2026-02-11T04:47:46.770Z",
       "lastChanged": "2026-02-09T19:20:13.525Z",
       "changePercent": 0,
       "history": [
@@ -2132,10 +2132,14 @@
         {
           "timestamp": "2026-02-11T03:47:49.107Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-11T04:47:46.770Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 1,
-      "checksToday": 4,
+      "checksToday": 5,
       "tags": [],
       "error": null
     },
@@ -2144,7 +2148,7 @@
       "name": "Ellicottville NY",
       "url": "https://www.ellicottvilleny.com/",
       "status": "ok",
-      "lastChecked": "2026-02-11T03:47:49.107Z",
+      "lastChecked": "2026-02-11T04:47:46.770Z",
       "lastChanged": "2026-02-09T19:20:13.525Z",
       "changePercent": 0,
       "history": [
@@ -2311,15 +2315,85 @@
         {
           "timestamp": "2026-02-11T03:47:49.107Z",
           "changePercent": 0
+        },
+        {
+          "timestamp": "2026-02-11T04:47:46.770Z",
+          "changePercent": 0
         }
       ],
       "totalChanges": 1,
-      "checksToday": 3,
+      "checksToday": 4,
       "tags": [],
       "error": null
     }
   },
   "activityLog": [
+    {
+      "timestamp": "2026-02-11T04:47:46.770Z",
+      "siteId": "snowflake-ski-shop",
+      "type": "check",
+      "detail": "0% change (below 3% threshold)"
+    },
+    {
+      "timestamp": "2026-02-11T04:47:46.770Z",
+      "siteId": "fenton-test-monitor",
+      "type": "check",
+      "detail": "0% change (below 3% threshold)"
+    },
+    {
+      "timestamp": "2026-02-11T04:47:46.770Z",
+      "siteId": "fenton-mobility-shop",
+      "type": "check",
+      "detail": "0% change (below 3% threshold)"
+    },
+    {
+      "timestamp": "2026-02-11T04:47:46.770Z",
+      "siteId": "fenton-plan-a-van",
+      "type": "check",
+      "detail": "0.29% change (below 3% threshold)"
+    },
+    {
+      "timestamp": "2026-02-11T04:47:46.770Z",
+      "siteId": "fenton-ford-transit-140",
+      "type": "check",
+      "detail": "0% change (below 3% threshold)"
+    },
+    {
+      "timestamp": "2026-02-11T04:47:46.770Z",
+      "siteId": "fenton-schedule-service",
+      "type": "check",
+      "detail": "0.01% change (below 3% threshold)"
+    },
+    {
+      "timestamp": "2026-02-11T04:47:46.770Z",
+      "siteId": "fenton-mobility",
+      "type": "check",
+      "detail": "0.27% change (below 3% threshold)"
+    },
+    {
+      "timestamp": "2026-02-11T04:47:46.770Z",
+      "siteId": "ellicottville-ny",
+      "type": "check",
+      "detail": "0% change (below 3% threshold)"
+    },
+    {
+      "timestamp": "2026-02-11T04:47:46.770Z",
+      "siteId": "allegany-rv-drawing",
+      "type": "check",
+      "detail": "0% change (below 3% threshold)"
+    },
+    {
+      "timestamp": "2026-02-11T04:47:46.770Z",
+      "siteId": "allegany-claim-pass",
+      "type": "check",
+      "detail": "0% change (below 3% threshold)"
+    },
+    {
+      "timestamp": "2026-02-11T04:47:46.770Z",
+      "siteId": "allegany-mountain-resort",
+      "type": "check",
+      "detail": "1.25% change (below 3% threshold)"
+    },
     {
       "timestamp": "2026-02-11T03:47:49.107Z",
       "siteId": "snowflake-ski-shop",
@@ -3450,72 +3524,6 @@
     },
     {
       "timestamp": "2026-02-10T10:47:41.879Z",
-      "siteId": "fenton-test-monitor",
-      "type": "check",
-      "detail": "0% change (below 3% threshold)"
-    },
-    {
-      "timestamp": "2026-02-10T10:47:41.879Z",
-      "siteId": "fenton-mobility-shop",
-      "type": "check",
-      "detail": "0% change (below 3% threshold)"
-    },
-    {
-      "timestamp": "2026-02-10T10:47:41.879Z",
-      "siteId": "fenton-plan-a-van",
-      "type": "check",
-      "detail": "0.13% change (below 3% threshold)"
-    },
-    {
-      "timestamp": "2026-02-10T10:47:41.879Z",
-      "siteId": "fenton-ford-transit-140",
-      "type": "check",
-      "detail": "0% change (below 3% threshold)"
-    },
-    {
-      "timestamp": "2026-02-10T10:47:41.879Z",
-      "siteId": "fenton-schedule-service",
-      "type": "check",
-      "detail": "0% change (below 3% threshold)"
-    },
-    {
-      "timestamp": "2026-02-10T10:47:41.879Z",
-      "siteId": "fenton-mobility",
-      "type": "check",
-      "detail": "0% change (below 3% threshold)"
-    },
-    {
-      "timestamp": "2026-02-10T10:47:41.879Z",
-      "siteId": "ellicottville-ny",
-      "type": "check",
-      "detail": "0% change (below 3% threshold)"
-    },
-    {
-      "timestamp": "2026-02-10T10:47:41.879Z",
-      "siteId": "allegany-rv-drawing",
-      "type": "check",
-      "detail": "0% change (below 3% threshold)"
-    },
-    {
-      "timestamp": "2026-02-10T10:47:41.879Z",
-      "siteId": "allegany-claim-pass",
-      "type": "check",
-      "detail": "0% change (below 3% threshold)"
-    },
-    {
-      "timestamp": "2026-02-10T10:47:41.879Z",
-      "siteId": "allegany-mountain-resort",
-      "type": "check",
-      "detail": "0.19% change (below 3% threshold)"
-    },
-    {
-      "timestamp": "2026-02-10T09:47:55.038Z",
-      "siteId": "snowflake-ski-shop",
-      "type": "check",
-      "detail": "0.02% change (below 3% threshold)"
-    },
-    {
-      "timestamp": "2026-02-10T09:47:55.038Z",
       "siteId": "fenton-test-monitor",
       "type": "check",
       "detail": "0% change (below 3% threshold)"
