@@ -46,6 +46,37 @@ export async function captureScreenshot(site) {
         .join('\n');
       await page.addStyleTag({ content: selectorsCSS });
     }
+    // Scroll through the page to trigger lazy-loaded images
+    if (site.fullPage ?? true) {
+      await page.evaluate(async () => {
+        const delay = (ms) => new Promise((r) => setTimeout(r, ms));
+        const step = window.innerHeight;
+        const maxScroll = document.body.scrollHeight;
+        for (let y = 0; y < maxScroll; y += step) {
+          window.scrollTo(0, y);
+          await delay(150);
+        }
+        window.scrollTo(0, 0);
+      });
+    }
+
+    // Wait for all images to finish loading
+    await page.evaluate(async () => {
+      const imgs = Array.from(document.querySelectorAll('img'));
+      await Promise.all(
+        imgs
+          .filter((img) => !img.complete)
+          .map(
+            (img) =>
+              new Promise((resolve) => {
+                img.addEventListener('load', resolve, { once: true });
+                img.addEventListener('error', resolve, { once: true });
+                setTimeout(resolve, 5000);
+              })
+          )
+      );
+    });
+
     await page.waitForTimeout(500);
 
     // Capture screenshot
