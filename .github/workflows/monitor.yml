@@ -1,0 +1,47 @@
+name: Visual Monitor
+
+on:
+  workflow_dispatch: {}
+  repository_dispatch:
+    types: [run-monitor]
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npx playwright install chromium --with-deps
+
+      - name: Run monitor
+        run: node monitor/index.mjs
+        env:
+          MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}
+          MAILGUN_DOMAIN: ${{ secrets.MAILGUN_DOMAIN }}
+          MAILGUN_TO: ${{ secrets.MAILGUN_TO }}
+          MAILGUN_FROM: ${{ secrets.MAILGUN_FROM }}
+
+      - name: Commit and push results
+        run: |
+          git config user.name "Visual Monitor Bot"
+          git config user.email "bot@visual-monitor"
+          git add data/
+          git diff --staged --quiet || git commit -m "Monitor run $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          for i in 1 2 3; do
+            git push && break
+            git pull -X theirs --no-edit
+            git push && break
+            sleep 5
+          done
